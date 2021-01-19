@@ -21,3 +21,25 @@ function toWeirdcase(s) {
 
 console.log(toWeirdcase('hello world'));
 console.log(toWeirdcase('my name is lee'));
+
+// otehr ways to solve
+// function toWeirdCase(s) {
+//   if (!s) return '';
+//   s = s.toLowerCase();
+
+//   const strings = s.split(' ');
+//   // console.log(strings);
+
+//   const checkAndSwitch = (str) => {
+//     return [...str].map((char, index) => {
+//       if (index % 2 === 0) char = char.toUpperCase();
+//       return char;
+//     }).join('');
+//   };
+  
+//   strings.forEach((string, index, array) => {
+//     array[index] = checkAndSwitch(string);
+//   });
+
+//   return strings.join(' ');
+// }

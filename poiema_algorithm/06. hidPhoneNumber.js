@@ -12,3 +12,21 @@ function hideNumbers(str) {
 
 console.log(hideNumbers('01033334444')); // *******4444
 console.log(hideNumbers('027778888'));   // *****8888
+
+
+
+// other ways to solve
+
+// function hideNumbers(str) {
+//   const arr = [...str];
+//   arr.splice(0, str.length - 4);
+//   for (let i = 0; i < str.length - 4; i++) {
+//     arr.unshift('*');
+//   }
+//   return arr.join('');
+// }
+
+
+// function hideNumbers(str) {
+//   return [...str].map((num, index, arr) => index > arr.length - 5 ? num : '*').join('');
+// }

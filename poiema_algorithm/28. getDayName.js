@@ -18,3 +18,19 @@ function getDayName(a, b) {
 
 console.log(getDayName(5, 24)); // TUE
 
+// other ways to solve
+function getDayName(a, b) {
+  let date = new Date(2016, (a - 1), b);
+  return date.toString().slice(0, 3).toUpperCase();
+}
+console.log(getDayName(5, 24));
+
+
+
+function getDayName(a, b) {
+  let arr = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+  let date = new Date(`2016-${a}-${b}`);
+  let day = date.getDay();
+  return arr[day];
+}
+console.log(getDayName(5, 24));

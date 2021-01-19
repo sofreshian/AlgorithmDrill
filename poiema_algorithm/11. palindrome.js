@@ -19,3 +19,15 @@ console.log(checkPalindrom('dad')); // true
 console.log(checkPalindrom('mom')); // true
 console.log(checkPalindrom('palindrom')); // false
 console.log(checkPalindrom('s')); // true
+
+// another way to solve
+
+function checkPalindrom(str) {
+  if (str === undefined || str === '') return false;
+  let rev;
+  [...str].forEach((_, index, arr) => {
+    rev += arr[index];
+  });
+  if (rev === str) return true;
+  return false;
+}
